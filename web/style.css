@@ -1,0 +1,129 @@
+/* 在身边 — 温暖适老化风格 */
+:root{
+  --bg:#faf6f0; --card:#ffffff; --ink:#3d3229; --sub:#8a7a6a;
+  --brand:#e8734a; --brand2:#f5a25d; --green:#4caf7d; --red:#e05252; --amber:#e8a13c;
+  --line:#f0e6d8; --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);font-size:15px}
+#app{max-width:520px;margin:0 auto;min-height:100vh;padding-bottom:80px;position:relative}
+.hidden{display:none!important}
+button{font-family:inherit;border:none;cursor:pointer}
+input,select,textarea{font-family:inherit;font-size:15px;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;width:100%;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--brand)}
+label.f{display:block;margin:10px 0 4px;color:var(--sub);font-size:13px}
+
+/* 顶部 */
+.topbar{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;padding:16px 18px 14px;position:sticky;top:0;z-index:50}
+.topbar h1{font-size:18px;font-weight:700}
+.topbar .slogan{font-size:12px;opacity:.85;margin-top:2px}
+.topbar .right{position:absolute;right:14px;top:14px;display:flex;gap:8px;align-items:center}
+.bell{position:relative;background:rgba(255,255,255,.2);border-radius:50%;width:36px;height:36px;font-size:17px;display:flex;align-items:center;justify-content:center;color:#fff}
+.bell .dot{position:absolute;top:-2px;right:-2px;background:var(--red);color:#fff;font-size:10px;min-width:16px;height:16px;border-radius:8px;display:flex;align-items:center;justify-content:center;padding:0 3px}
+.me-chip{background:rgba(255,255,255,.2);border-radius:14px;padding:5px 10px;font-size:12px;color:#fff}
+
+/* 卡片 */
+.card{background:var(--card);border-radius:var(--radius);padding:14px 16px;margin:12px 14px;box-shadow:0 2px 10px rgba(140,110,80,.06)}
+.card h3{font-size:15px;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.row{display:flex;align-items:center;gap:10px}
+.grow{flex:1}
+.sub{color:var(--sub);font-size:12.5px}
+.btn{background:var(--brand);color:#fff;border-radius:12px;padding:11px 18px;font-size:15px;font-weight:600}
+.btn.ghost{background:#fff;color:var(--brand);border:1.5px solid var(--brand)}
+.btn.grey{background:#efe8dd;color:var(--sub)}
+.btn.green{background:var(--green)}
+.btn.sm{padding:6px 12px;font-size:13px;border-radius:9px}
+.btn:disabled{opacity:.45}
+.tag{display:inline-block;font-size:11px;border-radius:6px;padding:2px 7px;margin-left:6px}
+.tag.ok{background:#e7f6ee;color:var(--green)}
+.tag.warn{background:#fdf3e0;color:var(--amber)}
+.tag.crit{background:#fdeaea;color:var(--red)}
+.tag.info{background:#eef2fb;color:#5b7fd4}
+
+/* 底部导航 */
+.tabbar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:520px;background:#fff;border-top:1px solid var(--line);display:flex;z-index:60;padding-bottom:env(safe-area-inset-bottom)}
+.tabbar button{flex:1;background:none;padding:8px 0 7px;color:var(--sub);font-size:11px;display:flex;flex-direction:column;align-items:center;gap:2px}
+.tabbar button .ic{font-size:21px}
+.tabbar button.on{color:var(--brand);font-weight:600}
+
+/* 状态大屏 */
+.elder-head{display:flex;align-items:center;gap:12px}
+.avatar{width:52px;height:52px;border-radius:50%;background:#fdeee4;display:flex;align-items:center;justify-content:center;font-size:28px}
+.status-pill{margin-left:auto;font-size:13px;font-weight:600;padding:5px 12px;border-radius:14px}
+.sp-normal{background:#e7f6ee;color:var(--green)}
+.sp-warning{background:#fdf3e0;color:var(--amber)}
+.sp-critical{background:#fdeaea;color:var(--red)}
+.sp-sos{background:var(--red);color:#fff;animation:blink 1s infinite}
+@keyframes blink{50%{opacity:.55}}
+.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.vcell{background:#fbf8f3;border-radius:12px;padding:9px 12px;font-size:13px}
+.vcell b{font-size:17px;display:block;margin-top:2px}
+.vcell .bad{color:var(--red)}
+.vcell .good{color:var(--green)}
+.medrow{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.medchip{font-size:12px;border-radius:8px;padding:4px 9px}
+.medchip.taken{background:#e7f6ee;color:var(--green)}
+.medchip.pending{background:#fdf3e0;color:var(--amber)}
+.medchip.missed{background:#fdeaea;color:var(--red)}
+.trend{display:flex;gap:4px;align-items:flex-end;height:44px;margin-top:8px}
+.trend .bar{flex:1;background:linear-gradient(180deg,var(--brand2),var(--brand));border-radius:4px 4px 0 0;min-height:3px;position:relative}
+.trend .bar .al{position:absolute;top:-6px;left:50%;transform:translateX(-50%);width:6px;height:6px;border-radius:50%;background:var(--red)}
+.trend .bar small{position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);font-size:9px;color:var(--sub);white-space:nowrap}
+
+/* 列表通用 */
+.item{padding:11px 0;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.ntf{display:flex;gap:10px;padding:11px 0;border-bottom:1px solid var(--line)}
+.ntf .ic{width:36px;height:36px;border-radius:10px;background:#fdeee4;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.ntf.unread{background:#fffaf5}
+
+/* 登录 */
+.auth-wrap{padding:60px 28px 20px;text-align:center}
+.auth-logo{font-size:52px}
+.auth-title{font-size:26px;font-weight:800;margin-top:10px;background:linear-gradient(135deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.auth-slogan{color:var(--sub);margin:6px 0 26px;font-size:13.5px}
+.auth-card{background:#fff;border-radius:20px;padding:22px;text-align:left;box-shadow:0 4px 20px rgba(140,110,80,.08)}
+.seg{display:flex;background:#f3ece1;border-radius:12px;padding:4px;margin-bottom:14px}
+.seg button{flex:1;background:none;border-radius:9px;padding:9px 0;font-size:14px;color:var(--sub)}
+.seg button.on{background:#fff;color:var(--brand);font-weight:700;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.auth-foot{margin-top:16px;text-align:center;font-size:13px;color:var(--sub)}
+.auth-foot a{color:var(--brand);text-decoration:none;font-weight:600}
+
+/* SOS */
+.sos-fab{position:fixed;right:calc(50% - 235px);bottom:88px;z-index:70}
+@media(max-width:520px){.sos-fab{right:16px}}
+.sos-fab button{width:62px;height:62px;border-radius:50%;background:var(--red);color:#fff;font-size:13px;font-weight:800;box-shadow:0 4px 16px rgba(224,82,82,.5)}
+.sos-full{position:fixed;inset:0;background:rgba(224,82,82,.97);z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;padding:24px}
+.sos-full h2{font-size:24px;margin-bottom:8px}
+.sos-full .big{width:170px;height:170px;border-radius:50%;background:#fff;color:var(--red);font-size:26px;font-weight:900;margin:22px 0;box-shadow:0 0 0 14px rgba(255,255,255,.25)}
+.sos-full .cancel{background:rgba(255,255,255,.2);color:#fff;border-radius:12px;padding:12px 30px;font-size:15px}
+.soslog{width:100%;max-width:400px;text-align:left;background:rgba(0,0,0,.18);border-radius:12px;padding:12px;margin-top:18px;font-size:12.5px;max-height:150px;overflow-y:auto}
+.soslog p{margin:4px 0;opacity:.92}
+
+/* 老人端 — 超大适老化 */
+body.elder-mode{font-size:20px}
+body.elder-mode #app{max-width:100%}
+.elder-home{padding:18px;display:flex;flex-direction:column;gap:16px;min-height:100vh;background:var(--bg)}
+.elder-greet{font-size:26px;font-weight:800;text-align:center;padding:12px 0 2px}
+.elder-btn{width:100%;border-radius:22px;padding:26px 18px;font-size:24px;font-weight:800;display:flex;align-items:center;gap:16px;text-align:left;box-shadow:0 3px 12px rgba(140,110,80,.1)}
+.elder-btn .ic{font-size:44px}
+.eb-sos{background:var(--red);color:#fff}
+.eb-checkin{background:var(--green);color:#fff}
+.eb-call{background:#5b8fd4;color:#fff}
+.eb-service{background:var(--brand);color:#fff}
+.eb-med{background:#fff;color:var(--ink);border:2px solid var(--line)}
+.elder-note{text-align:center;color:var(--sub);font-size:14px}
+
+/* 弹层 */
+.sheet-mask{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:150;display:flex;align-items:flex-end;justify-content:center}
+.sheet{background:#fff;width:100%;max-width:520px;border-radius:22px 22px 0 0;padding:20px 20px 30px;max-height:86vh;overflow-y:auto;animation:up .22s}
+@keyframes up{from{transform:translateY(40px);opacity:.4}}
+.sheet h3{font-size:17px;margin-bottom:12px}
+.toast{position:fixed;top:76px;left:50%;transform:translateX(-50%);background:rgba(50,40,30,.92);color:#fff;padding:10px 18px;border-radius:12px;font-size:14px;z-index:300;max-width:86%;animation:up .2s}
+.empty{text-align:center;color:var(--sub);padding:26px 0;font-size:13.5px}
+.divider{height:1px;background:var(--line);margin:12px 0}
+.kv{display:flex;justify-content:space-between;padding:7px 0;font-size:14px;border-bottom:1px dashed var(--line)}
+.kv:last-child{border-bottom:none}
+.share-card{background:linear-gradient(150deg,#fff4ea,#ffe8d6);border-radius:18px;padding:20px;margin:12px 14px}
+.share-card h4{font-size:16px}
+.share-card .hook{color:var(--brand);font-size:13px;margin-top:10px;font-style:italic}

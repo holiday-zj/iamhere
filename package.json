@@ -1,0 +1,1 @@
+{"name": "zaishenbian", "version": "0.1.0", "description": "在身边 — 异地子女养老协同平台 MVP（零依赖 Node + SQLite + Web 三端）", "main": "server/index.js", "scripts": {"start": "node server/index.js", "seed": "node server/seed.js", "test": "node tests/api-test.js"}, "engines": {"node": ">=22.5"}, "license": "UNLICENSED"}
